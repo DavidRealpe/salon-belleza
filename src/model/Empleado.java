@@ -9,20 +9,70 @@ public class Empleado{
 	private String cargo;
 	private int anioIngreso;
 	private double ganancia;
+	private double impuestoAcumulado;	
 
-	private Servicio[] servicio;
+	private Servicio servicio;
 
-	public Empleado(String nombre, String cedula, String cargo, int anioIngreso, double ganancia){
+	public Empleado(String nombre, String cedula, String cargo, int anioIngreso, Servicio servico){
 		this.nombre = nombre;
 		this.cedula = cedula;
 		this.cargo = cargo;
 		this.anioIngreso = anioIngreso;
 		this.ganancia = ganancia;
-		servicio = new Servicio[MAX];
+		this.servicio = servicio;
+		this.impuestoAcumulado = impuestoAcumulado;
+	}
+
+	public String getNombre(){
+		return nombre;
 	}
 
 	public String getCedula(){
 		return cedula;
 	}
+
+	public Servicio getServicio(){
+		return servicio;
+	}
+
+	public double getGanancia(){
+
+		char tipoServ = getServicio().getTipoServicio();
+
+		if(tipoServ == 'c'){
+			ganancia = getServicio().getIngreso()*2.0;
+		}
+		else if(tipoServ == 'm'){
+			ganancia = getServicio().getIngreso()*3.5;
+		}
+		else if(tipoServ == 'p'){
+			ganancia = getServicio().getIngreso()*2.5;
+		}
+
+		return ganancia;
+	}
+
+	public double getImpuestoAcumulado(){
+
+		/*char corte = getServicio().CORTE_CABELLO;
+		char manicure = getServicio().MANICURE;
+		char pedicure = getServicio().PEDICURE;*/
+
+		char tipoServ = getServicio().getTipoServicio();
+
+		if(tipoServ == 'c'){
+			impuestoAcumulado = getServicio().getIngreso()*0.5;
+		}
+		else if(tipoServ == 'm'){
+			impuestoAcumulado = getServicio().getIngreso()*0.5;
+		}
+		else if(tipoServ == 'p'){
+			impuestoAcumulado = getServicio().getIngreso()*0.5;
+		}
+
+		return impuestoAcumulado;
+	}
+
+	
 
 }
