@@ -28,7 +28,6 @@ public class Main{
 		do{
 
 		System.out.println("Bienvenido al software de la Sala Estetica\n");
-
 		System.out.println("Seleccione una opcion que desee.");
 		System.out.println("1. Ver empleados.");
 		System.out.println("2. Salir.");
@@ -62,7 +61,7 @@ public class Main{
 							System.out.println("2. Camilo.");
 
 							int option3 = reader.nextInt();
-
+							
 							String rep1 = se.reporteEmpelado1();
 							String rep2 = se.reporteEmpleado2();
 

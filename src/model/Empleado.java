@@ -12,6 +12,9 @@ public class Empleado{
 	private double impuestoAcumulado;	
 
 	private Servicio servicio;
+	private Servicio servicio2;
+	private Servicio servicio3;
+
 
 	public Empleado(String nombre, String cedula, String cargo, int anioIngreso, Servicio servico){
 		this.nombre = nombre;
@@ -20,6 +23,8 @@ public class Empleado{
 		this.anioIngreso = anioIngreso;
 		this.ganancia = ganancia;
 		this.servicio = servicio;
+		this.servicio2 = null;
+		this.servicio3 = null;
 		this.impuestoAcumulado = impuestoAcumulado;
 	}
 

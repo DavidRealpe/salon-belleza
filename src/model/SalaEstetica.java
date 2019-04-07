@@ -33,11 +33,19 @@ public class SalaEstetica{
 		return promIng; 
 	}
 
-	/*public void hacerRegistro(){
+	public void hacerRegistro(){
 
-		String nombreR = registro.getNombre();
 		int vecesR = registro.getVecesRealizado();
-	}*/
+		String msg = "";
+
+
+		if(vecesR==0){
+			msg = "Se ha registrado por primera vez este servicio";
+		}else{
+			vecesR++;
+		}
+
+	}
 
 	public String reporteEmpleado1(){
 
